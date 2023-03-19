@@ -8,6 +8,7 @@ import Products from "../Products/Products"
         <div>
              <NavBar />
             <Banner />
+            <div className='product-card-container'></div>
             <Products />
         </div>
     )
