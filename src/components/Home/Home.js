@@ -1,9 +1,13 @@
+import Banner from "../Banner/Banner"
+import NavBar from "../NavBar/Navbar"
+
 
  const Home=()=>{
     return(
-        <h1>
-            Home
-        </h1>
+        <div>
+             <NavBar />
+            <Banner />
+        </div>
     )
  }
 
