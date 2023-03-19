@@ -2,7 +2,7 @@ import CartElements from "./CartElements";
 import CartTotal from "./CartTotal";
 import { useContext } from "react";
 import { dataContext } from "../Context/DataContext";
-
+import "./CartContent.css"
 
 const CartContent = () => {
 
