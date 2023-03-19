@@ -5,8 +5,10 @@ import "./Products.css";
 const Products = () => {
   const {data, cart, setCart} =useContext(dataContext);
 
-  const buyProducts = () =>{
-    console.log("me compraste")
+  const buyProducts = (product) =>{
+    console.log(product);
+    //copio el carrito y le agrego producto
+    setCart([...cart, product])
   }
 
   return data.map((product) => {
