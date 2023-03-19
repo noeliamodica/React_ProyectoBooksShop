@@ -7,8 +7,15 @@ const Products = () => {
 
   const buyProducts = (product) =>{
     console.log(product);
-    //copio el carrito y le agrego producto
-    setCart([...cart, product])
+    //para buscar si en el carrito hay otro producto con el mismo id
+    const productrepeat = cart.find ((item)=> item.id === product.id  )
+
+    if (productrepeat){
+      setCart(cart.map((item)=> (item.id === product.id ? {...product, quanty:productrepeat.quanty + 1} : item)))
+    } else{
+      setCart([...cart, product]);
+    }
+    
   }
 
   return data.map((product) => {
