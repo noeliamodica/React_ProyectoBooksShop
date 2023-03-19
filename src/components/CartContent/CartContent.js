@@ -1,4 +1,5 @@
 import CartElements from "./CartElements";
+import CartTotal from "./CartTotal";
 
 
 const CartContent = () => {
@@ -7,6 +8,7 @@ const CartContent = () => {
     return (
         <div>
             <CartElements />
+            <CartTotal />
          </div>
     )
   };
