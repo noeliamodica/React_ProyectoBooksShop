@@ -1,5 +1,6 @@
 import Banner from "../Banner/Banner"
 import NavBar from "../NavBar/Navbar"
+import Products from "../Products/Products"
 
 
  const Home=()=>{
@@ -7,6 +8,7 @@ import NavBar from "../NavBar/Navbar"
         <div>
              <NavBar />
             <Banner />
+            <Products />
         </div>
     )
  }
