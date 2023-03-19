@@ -3,7 +3,11 @@ import { dataContext } from "../Context/DataContext";
 import "./Products.css";
 
 const Products = () => {
-  const {data} =useContext(dataContext);
+  const {data, cart, setCart} =useContext(dataContext);
+
+  const buyProducts = () =>{
+    console.log("me compraste")
+  }
 
   return data.map((product) => {
     return (
@@ -11,7 +15,7 @@ const Products = () => {
         <img src={product.img} alt='img-product-card' />
         <h3>{product.name}</h3>
         <h4>{product.price}$</h4>
-        <button>buy</button>
+        <button onClick={() => buyProducts(product)}>buy</button>
       </div>
     );
   });
