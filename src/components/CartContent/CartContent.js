@@ -4,8 +4,8 @@ const CartContent = () => {
   
     return (
         <div>
-            CartContent
-        </div>
+            h1ola
+         </div>
     )
   };
   
