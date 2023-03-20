@@ -10,7 +10,7 @@ const NavBar=()=>{
         <div className='nav-container'>
           <nav className='navbar'>
             <Link to={"/"}>
-              <h1 className='navbar-logo'>Shop.</h1>
+              <h1 className='navbar-logo'>Shop</h1>
             </Link>
             <Link className='seeCarrito' to={"/cart"}>
               🛒
