@@ -14,7 +14,7 @@ const CartElements = () => {
         <img src={product.img} alt='product-card' />
         <h3 className='name'>{product.name}</h3>
         <CartItemCounter product={product} quanty={product.quanty} />
-        <h4 className='price'>{product.price}$</h4>   
+        <h4 className='price'>{product.price * product.quanty}$</h4>
         
       </div>
     );
