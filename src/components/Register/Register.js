@@ -37,7 +37,7 @@ export function Register() {
       };
   
     return (
-        <div className="container">
+        <div className="container-register">
         <div className="innerBox">
           <h1 className="heading">Registro</h1>
           <InputControl

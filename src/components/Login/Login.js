@@ -4,7 +4,7 @@ export function Login (){
    
     
     return (
-      <div className="container">
+      <div className="container-login">
          <div className="innerBox">
           <h1 className="heading">Login</h1>
          
