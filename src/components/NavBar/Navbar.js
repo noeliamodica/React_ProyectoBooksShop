@@ -4,7 +4,7 @@ import TotalItems from "../CartContent/TotalItems";
 import { useContext } from "react";
 import { dataContext } from "../Context/DataContext";
 
-const NavBar=()=>{
+const NavBar=(props)=>{
   const { cart } = useContext(dataContext);
     return (
         <div className='nav-container'>
@@ -15,7 +15,14 @@ const NavBar=()=>{
             <Link to={"/login"}>
               <h1 className=''>Login</h1>
             </Link>
-            <Link className='seeCarrito' to={"/cart"}>
+            <Link to={"/register"}>
+              <h1 className=''>Register</h1>
+            </Link>
+           
+            <p>{props.name?`Bienvenido - ${props.name}`:"Inicie sesión"}</p>
+             <button>Salir</button>
+
+             <Link className='seeCarrito' to={"/cart"}>
               🛒
               {cart.length > 0 ? <TotalItems /> : null}
             </Link>
