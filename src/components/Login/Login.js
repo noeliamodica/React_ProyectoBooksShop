@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./Login.css";
 export function Login (){
    
     
@@ -6,9 +7,9 @@ export function Login (){
       <div className="container">
          <div className="innerBox">
           <h1 className="heading">Login</h1>
-          </div>
+         
           <div className="footer">
-            <b className="error"></b>
+            <b className="error"> Error</b>
             <button>Login btn</button>
             <p>
               Crear cuenta
@@ -16,6 +17,7 @@ export function Login (){
                 <Link to="/register">Ir  </Link>
               </span>
             </p>
+          </div>
           </div>
 
       </div>
