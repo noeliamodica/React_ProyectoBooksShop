@@ -5,8 +5,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DataProvider from "./components/Context/DataContext"
 import { Login } from './components/Login/Login';
 import { Register } from './components/Register/Register';
+import { auth } from './firebase';
+import { useState } from "react";
+import { useEffect } from "react";
 
 function App() {
+  const [userName,setUserName]=useState([])
+ useEffect(()=>{
+  auth.onAuthStateChanged((user)=>{
+    if(user){
+      setUserName(user.displayName)
+    }else setUserName("")
+  })
+ },[])
+  
   return (
     <DataProvider>
       <BrowserRouter>
