@@ -1,10 +1,15 @@
 import "./NavBar.css"
-import { Link } from "react-router-dom";
 import TotalItems from "../CartContent/TotalItems";
 import { useContext } from "react";
 import { dataContext } from "../Context/DataContext";
+import { Link } from "react-router-dom";
+import {auth} from "../../firebase"
+
+
+
 
 const NavBar=(props)=>{
+
   const { cart } = useContext(dataContext);
     return (
         <div className='nav-container'>
@@ -19,8 +24,11 @@ const NavBar=(props)=>{
               <h1 className=''>Register</h1>
             </Link>
            
-            <p>{props.name?`Bienvenido - ${props.name}`:"Inicie sesión"}</p>
-             <button>Salir</button>
+            <div>
+            <h2>{props.name?`Bienvenido - ${props.name}`:"Inicie sesión"}</h2>
+           <button>Salir</button>
+     
+             </div>    
 
              <Link className='seeCarrito' to={"/cart"}>
               🛒
