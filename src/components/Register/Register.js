@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { auth } from "../../firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { InputControl } from "../InputControl/InputControl";
 
 export function Register() {
   
@@ -39,10 +40,31 @@ export function Register() {
         <div className="container">
         <div className="innerBox">
           <h1 className="heading">Registro</h1>
+          <InputControl
+          label="Nombre"
+          placeholder="Ingrese un nombre"
+          onChange={(event) =>
+            setvalues((prev) => ({ ...prev, name: event.target.value }))
+          }
+        />
+         <InputControl
+          label="Email"
+          placeholder="Ingrese un correo"
+          onChange={(event) =>
+            setvalues((prev) => ({ ...prev, email: event.target.value }))
+          }
+        />
+        <InputControl
+          label="Contraseña"
+          placeholder="Ingrese una contraseña"
+          onChange={(event) =>
+            setvalues((prev) => ({ ...prev, pass: event.target.value }))
+          }
+        />
          
-    
           <div className="footer">
-            <b className="error">Error</b>
+            <b className="error">{errorMsg}</b>
+            <button onClick={registro} disabled={submitButtonDisabled}></button>
             <button>
               Guardar
             </button>
@@ -53,8 +75,6 @@ export function Register() {
               </span>
             </p>
           </div>
-       
-       
         </div>
       </div>
     );
